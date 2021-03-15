@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mencari Nilai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <script src="main.js"></script>
+<body>
+        <center>
+    <div class="container"> 
+        
+        <header>
+            <div class='title'>Menghitung Nilai</div>
+        </header>
+        <div class="progress-bar">
+            <div class="step">
+    <p>
+        
+        <p> <div class='title'>Statistik</div></p><br>
+        <form>
+        <div class="label"> Masukkan Nilai ke 1 </div><br>
+        <input type="text" name="" id="firstNum" /><br><br>
+        <div class="label"> Masukkan Nilai ke 2 </div><br>
+        <input type="text" name="" id="secondNum" /><br><br>
+        <div class="label"> Masukkan Nilai ke 3 </div><br>
+        <input type="text" name="" id="thirdNum" /><br><br>
+  
+        <input type="button" class="block" onclick="average(); highest(); lowest(); middle()" value="Hitung">
+        
+        <input type="button" class="block" onclick="document.getElementById('firstNum').value='', 
+
+        document.getElementById('secondNum').value='', 
+        document.getElementById('thirdNum').value='',
+        document.getElementById('rata').value='',
+        document.getElementById('tinggi').innerHTML = '',
+        document.getElementById('rata').innerHTML = '',
+        document.getElementById('rendah').innerHTML = '',
+        document.getElementById('tengah').innerHTML = ''"
+        value="Hapus"/><br><br>
+      
+        </form>
+
+        
+    <p>
+        <p> <div class='title'>Hasil</div></p><br>
+        
+        <div class="label"> Nilai Rata-Rata =
+        <span id="rata"></span></div><br>
+    </p>
+    <p>
+        
+        <div class="label"> Nilai Tertinggi = 
+        <span id="tinggi"></span></div><br>
+    </p>
+    <p>
+        
+        <div class="label"> Nilai Terendah = 
+        <span id="rendah"></span></div><br>
+    </p>
+    <p>
+        
+        <div class="label"> Nilai Tengah = 
+        <span id="tengah"></span></div><br>
+    </p>
+                
+            </div>
+        </div>
+    </div>
+    <a href= "index.html" ><input type="button" value="Halaman Utama" class="block"></a>
+        </center>
+</body>
+</html>
