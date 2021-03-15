@@ -9,7 +9,7 @@ body{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 30vh;
 }
 ::selection{
     color: #fff;
