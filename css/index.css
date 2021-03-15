@@ -92,6 +92,14 @@ hr{
     border: solid 1px #D5DBDB; 
 }
 
+.tombol{
+    color: #1b0cec;
+    padding: 1%;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    margin:20px
+}
 .table{
     margin-top: 15px;
     border-collapse: collapse;
