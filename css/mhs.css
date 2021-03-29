@@ -1,0 +1,93 @@
+body{
+    background-color: #85e7e7;
+    background-image: linear-gradient(120deg,#dff9fb,#7ed6df,#22a6b3);
+}
+h2{
+    color: #08484d;
+}
+.title{
+    background-color: rgb(242, 245, 247);
+    color: rgb(19, 20, 20);
+    display: inline-block;
+    padding: 5px 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    min-width: 100px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.block{
+    color: #0c0e0e;
+    padding: 10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin:10px
+}
+button {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+table {
+    font: 17px/30px Verdana, Arial, Helvetica, sans-serif;
+    border-collapse: collapse; 
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table th {
+    padding: 0 0.5em; text-align: center; 
+    background-color: #43d46a;
+    color: #131413;
+}
+table tr {
+    border-top: 1px solid rgba(12, 12, 12, 0.712); 
+    border-bottom: 1px solid rgb(19, 17, 17);
+    background: #d7f5bb;
+}
+table td {
+    border-bottom: 1px solid rgb(19, 17, 17); 
+    padding: 0 0.5em;
+}
+form {
+    margin-top: 30px;
+}
+ul {
+    list-style-type: none; 
+    margin: 0px; 
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+li {
+    padding: 12px; 
+    border-bottom: 1px solid rgb(183, 233, 153);
+    text-align: center;
+    color: #101111;
+}
+li:first-child, li:last-child {
+    border-top: 1px solid rgb(17, 13, 13);
+}
+label {
+    width: 100px; 
+    margin-top: 3px; 
+    display: inline-block;
+}
+#pesan {
+    padding: 10px;
+    color: #0f0d0d; 
+    font-family: monospace;
+    text-align: center;
+}
+.box{
+    width: 40%;
+    border-radius: 10px;
+    border: 1px solid #8cda5f;
+    padding: 20px 0px 20px 0px;
+    margin-left: 30%;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%);
+    background-color: rgb(189, 235, 177);
+}

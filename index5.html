@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muh Yoga Triatmojo_D121191007</title>
+    <link rel="stylesheet" href="css/mhs.css">
+</head>
+<body>    
+    <center>
+        <h2>
+            <b class="title">Tugas Pemrograman Web</b>
+        </h2>
+    </center>
+    <div class="box">
+        <center>
+            <form id='frmUtama'>
+            <h2>
+                <b>Registrasi Mahasiswa</b>
+            </h2>
+            <ul>     
+                <li>
+                    <label for="nama">Nama:</label>
+                    <input id="nama" name="nama" type="text" maxlength="50" required/>
+                </li>
+                <li>
+                    <label for="nim">NIM:</label>
+                    <input id="nim" name="nim" type="text" maxlength="20" required/>
+                </li>
+                <li>
+                    <label for="prodi">Prodi:</label>
+                    <input id="prodi" name="prodi" type="text" maxlength="50" required/>
+                </li>     
+                <li>
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="text" maxlength="50" required />
+                </li>
+                <li>
+                    <input id='btnTambah' type="submit" value="Tambah" />
+                    <input type="button" id="btn" value="Hapus" class="btn" onClick="Hapus()">
+                    <input type="button" id="btn" value="Kembali" class="btn" onClick="Kembali()">
+                </li>
+            </ul>
+            </form>
+            <div id='pesan'></div>
+        </center>
+    </div><br>
+    <center>
+    <h2>
+        <b class="title">Tabel Data</b>
+    </h2>
+</center>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Prodi</th>
+                <th>Email</th>
+                <th></th>
+            </tr>         
+        </thead>
+        <tbody id="tabel"></tbody>
+    </table><br><br><br> 
+    <center>
+    <a href= "index.html" ><input type="button" value="Halaman Utama" class="block"></a>
+    </center>
+    <script src="mhs.js"></script>
+</body>
+</html>
