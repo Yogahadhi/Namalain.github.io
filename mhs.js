@@ -18,15 +18,19 @@ function tambahBaris(e) {
         return;
     }
 
- 
+    data.nama = nama.value;
+    data.nim = nim.value;
+    data.prodi = prodi.value;
+    data.email = email.value;
+
     // Membuat baris baru
     var baris = tabel.insertRow();
     baris.id = nim.value;
     
-    baris.insertCell().appendChild(document.createTextNode(nama.value));
-    baris.insertCell().appendChild(document.createTextNode(nim.value));
-    baris.insertCell().appendChild(document.createTextNode(prodi.value));
-    baris.insertCell().appendChild(document.createTextNode(email.value));
+    baris.insertCell().appendChild(document.createTextNode(data.nama));
+    baris.insertCell().appendChild(document.createTextNode(data.nim));
+    baris.insertCell().appendChild(document.createTextNode(data.prodi));
+    baris.insertCell().appendChild(document.createTextNode(data.email));
  
     // Membuat tombol hapus untuk setiap baris
     var btnHapus = document.createElement('input');
@@ -108,4 +112,36 @@ function Hapus(){
     
 form.addEventListener('submit', tambahBaris, false);                  
 tabel.addEventListener('click', hapusBaris, true);  
-}          
+}
+
+let data = {
+    nama : '',
+    nim : '',
+    prodi :'',  
+    email :'', 
+    
+    set setNama(newNama){
+        this.nama = newNama;
+    },
+    get getNama(){
+        return this.nama;
+    },
+    set setNim(newNim){
+        this.nim = newNim;
+    },
+    get getNim(){
+        return this.nim;
+    },
+    set setProdi(newProdi){
+        this.prodi = newProdi;
+    },
+    get getProdi(){
+        return this.prodi;
+    },
+    set setEmail(newEmail){
+        this.email = newEmail;
+    },
+    get getEmail(){
+        return this.email;
+    } 
+}
