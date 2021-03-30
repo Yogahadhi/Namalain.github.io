@@ -54,6 +54,7 @@ form.addEventListener('submit', tambahBaris, false);
 tabel.addEventListener('click', hapusBaris, true);
 
 function kesalahanHandler(e) {
+    pesan.innerHTML += 'Kesalahan Database: ' + e.target.errorCode + '<br>';
 }
 
 function buatDatabase() {
@@ -84,6 +85,7 @@ function cetakPesanHandler(msg) {
 function buatTransaksi() {
     var transaction = db.transaction(['mahasiswa'], 'readwrite');
     transaction.onerror = kesalahanHandler;
+    transaction.oncomplete = cetakPesanHandler('Transaksi baru saja diselesaikan.');
     return transaction;
 }
 
@@ -91,15 +93,45 @@ function tambahKeDatabase(mahasiswa) {
     var objectstore = buatTransaksi().objectStore('mahasiswa');
     var request = objectstore.add(mahasiswa);
     request.onerror = kesalahanHandler;
-
+    request.onsuccess = cetakPesanHandler('Mahasiswa [' + mahasiswa.nim + '] telah ditambahkan ke database lokal.');
 }
 
- 
-function hapusBaris(e) {
-    if (e.target.type=='button') {                
-        tabel.deleteRow(tabel.rows.namedItem(e.target.id).sectionRowIndex);
+function bacaDariDatabase() {
+    var objectstore = buatTransaksi().objectStore('mahasiswa');
+    objectstore.openCursor().onsuccess = function(e) {
+        var result = e.target.result;
+        if (result) {
+            pesan.innerHTML += 'Membaca mahasiswa [' + result.value.nim + '] dari database.<br>';
+            var baris = tabel.insertRow();
+            baris.id = result.value.nim;
+            baris.insertCell().appendChild(document.createTextNode(result.value.nim));
+            baris.insertCell().appendChild(document.createTextNode(result.value.nama));
+            baris.insertCell().appendChild(document.createTextNode(result.value.prodi));
+            baris.insertCell().appendChild(document.createTextNode(result.value.email));
+            var btnHapus = document.createElement('input');
+            btnHapus.type = 'button';
+            btnHapus.value = 'Hapus';
+            btnHapus.id = result.value.nim;
+            baris.insertCell().appendChild(btnHapus);
+            result.continue();
+        }
     }
 }
+
+function hapusDariDatabase(nim) {
+    var objectstore = buatTransaksi().objectStore('mahasiswa');
+    var request = objectstore.delete(nim);
+    request.onerror = kesalahanHandler;
+    request.onsuccess = cetakPesanHandler('Mahasiswa [' + nim + '] berhasil dihapus dari database lokal.');
+}
+
+function hapusBaris(e) {
+    if (e.target.type == 'button') {
+        tabel.deleteRow(tabel.rows.namedItem(e.target.id).sectionRowIndex);
+        hapusDariDatabase(e.target.id);
+    }
+}
+
 function Kembali(){
     history.go(-1);
 }
@@ -109,6 +141,8 @@ function Hapus(){
     document.getElementById("prodi").value = "";
     document.getElementById("email").value = "";
     pesan.textContent = '';
+    pesan.innerHTML = '';
+    request.onsuccess = '';
     
 form.addEventListener('submit', tambahBaris, false);                  
 tabel.addEventListener('click', hapusBaris, true);  
