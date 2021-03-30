@@ -104,8 +104,8 @@ function bacaDariDatabase() {
             pesan.innerHTML += 'Membaca mahasiswa [' + result.value.nim + '] dari database.<br>';
             var baris = tabel.insertRow();
             baris.id = result.value.nim;
-            baris.insertCell().appendChild(document.createTextNode(result.value.nim));
             baris.insertCell().appendChild(document.createTextNode(result.value.nama));
+            baris.insertCell().appendChild(document.createTextNode(result.value.nim));
             baris.insertCell().appendChild(document.createTextNode(result.value.prodi));
             baris.insertCell().appendChild(document.createTextNode(result.value.email));
             var btnHapus = document.createElement('input');
