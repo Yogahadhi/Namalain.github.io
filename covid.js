@@ -56,6 +56,7 @@ $(document).ready(function(){
                                     'Sembuh : '+sembuh+' Orang'
                                 )
                             }
+
                             if(namaNegara === 'Singapore'){
                                 var positif = dataNegara.cases;
                                 var mati = dataNegara.deaths;
