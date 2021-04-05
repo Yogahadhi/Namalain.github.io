@@ -1,0 +1,30 @@
+.box{
+    padding: 30px 40px;
+    border-radius: 5px;
+}
+.bendera{
+    width: 150px;
+    border-radius: 50%;
+}
+.btn{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0px;
+    color: #fff;
+    background: #0866e0;
+}
+.block{
+    color: #0c0e0e;
+    padding: 10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin:10px
+}
+button {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
