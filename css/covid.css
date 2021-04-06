@@ -28,3 +28,15 @@ button {
     border-radius: 5px;
     border: none;
 }
+.title{
+    background-color: rgb(111, 187, 238);
+    color: rgb(235, 245, 245);
+    display: inline-block;
+    padding: 5px 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    min-width: 100px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
