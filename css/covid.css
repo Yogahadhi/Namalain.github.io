@@ -86,3 +86,26 @@ h1{
     font-family: Handlee;
     font-weight: bold;
 }
+
+.table-indonesia{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+}
+
+.table-singapore{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.table-malaysia{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+}
