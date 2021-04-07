@@ -15,9 +15,9 @@ $(document).ready(function(){
                     var positif = data.cases;
                     var mati = data.deaths;
                     var sembuh = data.recovered; 
-                    $('#positif_global').html(positif);
-                    $('#mati_global').html(mati);
-                    $('#sembuh_global').html(sembuh);
+                    $('#positif_global').html(Number(positif).toLocaleString('id'));
+                    $('#mati_global').html(Number(mati).toLocaleString('id'));
+                    $('#sembuh_global').html(Number(sembuh).toLocaleString('id'));
                 }catch{
                     alert('error');
                 }
@@ -52,9 +52,9 @@ $(document).ready(function(){
                                 var mati = dataNegara.deaths;
                                 var sembuh = dataNegara.recovered;
                                 $('#indo').html(
-                                    $('#positif_indo').html(positif)+
-                                    $('#mati_indo').html(mati)+
-                                    $('#sembuh_indo').html(sembuh)
+                                    $('#positif_indo').html(Number(positif).toLocaleString('id'))+
+                                    $('#mati_indo').html(Number(mati).toLocaleString('id'))+
+                                    $('#sembuh_indo').html(Number(sembuh).toLocaleString('id'))
                                 )
                             }
 
@@ -74,9 +74,9 @@ $(document).ready(function(){
                                 var mati = dataNegara.deaths;
                                 var sembuh = dataNegara.recovered;
                                 $('#malay').html(
-                                    $('#positif_malay').html(positif)+
-                                    $('#mati_malay').html(mati)+
-                                    $('#sembuh_malay').html(sembuh)
+                                    $('#positif_malay').html(Number(positif).toLocaleString('id'))+
+                                    $('#mati_malay').html(Number(mati).toLocaleString('id'))+
+                                    $('#sembuh_malay').html(Number(sembuh).toLocaleString('id'))
                                 )
                             }
 
@@ -96,9 +96,9 @@ $(document).ready(function(){
                                 var mati = dataNegara.deaths;
                                 var sembuh = dataNegara.recovered;
                                 $('#singa').html(
-                                    $('#positif_singa').html(positif)+
-                                    $('#mati_singa').html(mati)+
-                                    $('#sembuh_singa').html(sembuh)
+                                    $('#positif_singa').html(Number(positif).toLocaleString('id'))+
+                                    $('#mati_singa').html(Number(mati).toLocaleString('id'))+
+                                    $('#sembuh_singa').html(Number(sembuh).toLocaleString('id'))
                                 )
                             }
 
@@ -118,9 +118,9 @@ $(document).ready(function(){
                                 var mati = dataNegara.deaths;
                                 var sembuh = dataNegara.recovered;
                                 $('#vietnam').html(
-                                    $('#positif_vie').html(positif)+
-                                    $('#mati_vie').html(mati)+
-                                    $('#sembuh_vie').html(sembuh)
+                                    $('#positif_vie').html(Number(positif).toLocaleString('id'))+
+                                    $('#mati_vie').html(Number(mati).toLocaleString('id'))+
+                                    $('#sembuh_vie').html(Number(sembuh).toLocaleString('id'))
                                 )
                             }
 
@@ -140,9 +140,9 @@ $(document).ready(function(){
                                 var mati = dataNegara.deaths;
                                 var sembuh = dataNegara.recovered;
                                 $('#thail').html(
-                                    $('#positif_thai').html(positif)+
-                                    $('#mati_thai').html(mati)+
-                                    $('#sembuh_thai').html(sembuh)
+                                    $('#positif_thai').html(Number(positif).toLocaleString('id'))+
+                                    $('#mati_thai').html(Number(mati).toLocaleString('id'))+
+                                    $('#sembuh_thai').html(Number(sembuh).toLocaleString('id'))
                                 )
                             }
                         }
